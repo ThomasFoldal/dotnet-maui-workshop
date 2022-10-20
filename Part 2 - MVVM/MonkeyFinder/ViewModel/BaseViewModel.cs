@@ -1,6 +1,19 @@
-﻿namespace MonkeyFinder.ViewModel;
+﻿using Android.Views;
 
-public class BaseViewModel : INotifyPropertyChanged
+namespace MonkeyFinder.ViewModel;
+
+public partial class BaseViewModel : ObservableObject
 {
-    public event PropertyChangedEventHandler PropertyChanged;
+    public BaseViewModel()
+    {
+        
+    }
+    [ObservableProperty]
+    [NotifyPropertyChangedFor(nameof(IsNotBusy))]
+    bool isBusy;
+    [ObservableProperty]
+    string title;
+
+    public bool IsNotBusy => !IsBusy;
+
 }

@@ -1,6 +1,4 @@
-﻿using Android.Views;
-
-namespace MonkeyFinder.ViewModel;
+﻿namespace MonkeyFinder.ViewModel;
 
 public partial class BaseViewModel : ObservableObject
 {
